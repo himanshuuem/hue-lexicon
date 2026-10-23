@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hue Lexicon — A Multilingual Colour Dictionary</title>
+  <meta name="description" content="Learn colour names in English, Hindi, Spanish and Japanese. Click any swatch to copy its hex code.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,700;12..96,800&family=Noto+Sans+Devanagari:wght@500&family=Noto+Sans+JP:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="masthead">
+    <h1>Hue<span>Lexicon</span></h1>
+    <p>Fifteen colours, four languages. Pick a language, then tap a swatch to copy its hex code.</p>
+    <div class="toolbar">
+      <div class="lang-switch" role="radiogroup" aria-label="Display language">
+        <label><input type="radio" name="lang" value="en" checked> English</label>
+        <label><input type="radio" name="lang" value="hi"> हिन्दी</label>
+        <label><input type="radio" name="lang" value="es"> Español</label>
+        <label><input type="radio" name="lang" value="ja"> 日本語</label>
+      </div>
+      <button type="button" class="quiz-toggle" aria-pressed="false">Quiz mode</button>
+    </div>
+  </header>
+
+  <main>
+    <ul class="swatches" aria-live="polite"></ul>
+  </main>
+
+  <div class="toast" role="status" aria-live="polite"></div>
+
+  <footer class="footer">Designed &amp; built by <a href="https://github.com/himanshuuem">Himanshu</a></footer>
+
+  <template id="swatch-template">
+    <li class="swatch">
+      <button type="button" class="swatch-button">
+        <span class="name"></span>
+        <span class="translit"></span>
+        <span class="hex"></span>
+        <span class="contrast"></span>
+      </button>
+    </li>
+  </template>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
